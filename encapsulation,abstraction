@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class Student
+{
+    private:
+    int age;
+    string name;
+    int roll_no;
+    
+    public:
+    void setter (string n , int a, int b)
+    {
+       name = n; 
+       age = a;
+       roll_no = b;
+    }
+    
+    int getter ()
+    {
+        return age;
+    }
+    
+};
+    
+
+
+int main() {
+    Student obj;
+    obj.setter("harsh", 22, 2022);
+    cout<<obj.getter();
+    return 0;
+   
+}
