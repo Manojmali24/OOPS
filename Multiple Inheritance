@@ -1,0 +1,42 @@
+
+
+#include <iostream>
+using namespace std;
+
+class Human
+{ 
+  protected:
+  string name;
+};
+
+class Person 
+{
+  protected:
+  int age;
+};
+
+class Student : public Human, public Person
+{
+  int roll_no;
+
+  
+  public:
+  Student(string n, int a, int r)
+  {
+    name = n;
+    age = a;
+    roll_no = r;
+  }
+  
+  void display()
+  {
+    // Student obj("harsh", 2022);
+    cout<<name<<" "<<age<<" "<<roll_no;
+  }
+};
+
+int main()
+{
+  Student obj("harsh", 22, 2022);
+  obj.display();
+}
