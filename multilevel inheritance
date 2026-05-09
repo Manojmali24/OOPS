@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+class Human
+{ 
+  protected:
+  string name;
+};
+
+class Person : public Human
+{
+  protected:
+  int age;
+};
+
+class Student : public Person
+{
+  int roll_no;
+
+  
+  public:
+  Student(string n, int a, int r)
+  {
+    name = n;
+    age = a;
+    roll_no = r;
+  }
+  
+  void display()
+  {
+    // Student obj("harsh", 2022);
+    cout<<name<<" "<<age<<" "<<roll_no;
+  }
+};
+
+int main()
+{
+  Student obj("harsh", 22, 2022);
+  obj.display();
+}
